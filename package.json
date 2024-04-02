@@ -1,0 +1,16 @@
+{
+  "name": "test_landing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "sass": "^1.72.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
