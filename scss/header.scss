@@ -1,5 +1,5 @@
 .header {
-  padding: 26px 0 132px;
+  padding: 26px 0 130px;
   position: relative;
   background-color: var(--headerColor);
 
@@ -8,6 +8,7 @@
   }
 
   @media (max-width: 1200px) {
+
     padding: 26px 0 40px 0;
   }
   @media (max-width: 600px) {

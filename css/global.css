@@ -2,6 +2,7 @@
   --mainColor: #313131;
   --headerColor: #e9ded4;
   --darkButton: #1f1f1f;
+  --red: #F54932;
   --marquee-elements-displayed: 4;
   --marquee-elements-width: calc(100vw / var(--marquee-elements-displayed)) ;
 }
@@ -30,8 +31,13 @@ body {
   }
 }
 
+main {
+  width: 100%;
+  height: 100%;
+}
+
 .running-line {
-  background-color: #F54932;
+  background-color: var(--red);
   padding: 18px 0;
   overflow: hidden;
 }
