@@ -14,7 +14,7 @@
   @media (max-width: 600px) {
     padding: 18px 0 70px;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 376px) {
     padding: 18px 0 291px;
   }
 
@@ -37,7 +37,7 @@
       background-image: url("../images/header_image_1366.png");
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       background-image: url("../images/header_image_375.png");
       background-position: bottom center;
     }
@@ -62,7 +62,7 @@
     margin-top: 80px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 376px) {
     margin-top: 40px;
   }
   &__title {
@@ -140,7 +140,7 @@
         background-color: transparent;
         color: var(--darkButton);
         border: 2px solid var(--darkButton);
-        @media (max-width: 1120px) {
+        @media (max-width: 1200px) {
           background-color: white;
           border: none;
         }

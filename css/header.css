@@ -18,7 +18,7 @@
     padding: 18px 0 70px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .header {
     padding: 18px 0 291px;
   }
@@ -41,7 +41,7 @@
     background-image: url("../images/header_image_1366.png");
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .header::before {
     background-image: url("../images/header_image_375.png");
     background-position: bottom center;
@@ -65,7 +65,7 @@
     margin-top: 80px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .content {
     margin-top: 40px;
   }
@@ -153,7 +153,7 @@
   color: var(--darkButton);
   border: 2px solid var(--darkButton);
 }
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
   .content__buttons a:last-child {
     background-color: white;
     border: none;
