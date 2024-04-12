@@ -11,7 +11,6 @@
       max-width: unset;
     }
     & > h2 {
-      color: var(--mainColor);
       font-family: "Merriweather", sans-serif;
       font-size: 54px;
       line-height: 64.8px;
@@ -54,11 +53,12 @@
     @media (max-width: 1200px) {
       min-width: auto;
       margin-top: 148px;
+      gap: 0;
+      margin-bottom: 28px;
     }
 
     .block {
       background-image: url("../images/stages_background.png");
-      color: var(--mainColor);
       line-height: 24px;
       font-size: 20px;
       max-width: 394px;
@@ -91,6 +91,7 @@
       flex-direction: column;
       gap: 20px;
       @media (max-width: 1200px) {
+        width: 100%;
         & > div {
           & > div:last-child {
             padding-top: 0;
@@ -130,7 +131,7 @@
       @media (max-width: 1200px) {
         min-width: auto;
         flex-direction: column;
-        .stages__item{
+        .stages__item {
           min-height: 300px;
           min-width: auto;
         }
@@ -150,9 +151,8 @@
         width: unset;
         transform: rotate(-4deg);
       }
-
       @media (max-width: 376px) {
-        top: -120px;
+        top: -130px;
         left: 12px;
         max-width: 335px;
         width: 100%;
@@ -189,7 +189,7 @@
 }
 .stages__item {
   @media (max-width: 1200px) {
-    animation: fadeInOut 1s;
+    animation: animation 1s;
     display: none;
   }
 }
@@ -205,6 +205,7 @@
   margin: 8px auto 0 auto;
 
   @media (max-width: 1200px) {
+    max-width: 178px;
     display: flex;
     gap: 16px;
     flex-wrap: nowrap;
@@ -221,7 +222,7 @@
     &:hover {
       svg {
         circle {
-          fill: #fbce51;
+          fill: var(--orange);
           transition: 0.5s;
         }
       }
@@ -229,7 +230,6 @@
 
     &:disabled {
       opacity: 0.2;
-
       &:hover {
         svg {
           circle {
@@ -265,11 +265,10 @@
   }
 }
 
-@keyframes fadeInOut {
+@keyframes animation {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }

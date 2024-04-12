@@ -1,0 +1,112 @@
+.users {
+  padding: 100px 0 140px;
+}
+.users > div {
+  position: relative;
+}
+.users__header > h2 {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 64.8px;
+  text-transform: uppercase;
+}
+.users__content {
+  padding-top: 60px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .users__content {
+    justify-content: center;
+  }
+}
+.users__content .card {
+  animation: animation 1s;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 394px;
+}
+.users__content .card > h3 {
+  padding-top: 28px;
+  font-weight: 600;
+  line-height: 28.8px;
+  font-size: 24px;
+}
+.users__content .card > p {
+  padding-top: 6px;
+  font-size: 20px;
+  line-height: 24px;
+  opacity: 0.6;
+}
+.users__content .card > button {
+  margin-top: 35px;
+  width: 113px;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 62px;
+  font-size: 16px;
+  padding: 12px;
+}
+.users__controls {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 150px;
+}
+@media (max-width: 1200px) {
+  .users__controls {
+    position: relative;
+    max-width: 129px;
+    top: unset;
+    right: unset;
+    margin: 40px auto 0 auto;
+    gap: 14px;
+  }
+}
+.users__controls button {
+  width: 44px;
+  height: 44px;
+}
+@media (max-width: 1200px) {
+  .users__controls button {
+    width: 36px;
+    height: 36px;
+  }
+}
+.users__controls button:hover svg circle {
+  fill: var(--orange);
+  transition: 0.5s;
+}
+.users__controls div {
+  display: flex;
+  gap: 3px;
+  color: var(--mainColor);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+.users__controls div :nth-child(2) {
+  opacity: 0.6;
+}
+.users__controls div :nth-child(3) {
+  opacity: 0.6;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=users.css.map */

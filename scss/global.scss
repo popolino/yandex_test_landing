@@ -4,6 +4,7 @@
   --darkButton: #1f1f1f;
   --red: #F54932;
   --blue: #3057A2;
+  --orange: #FBCE51;
 
   --marquee-elements-displayed: 4;
   --marquee-elements-width: calc(100vw / var(--marquee-elements-displayed))
@@ -19,6 +20,7 @@ body {
   font-family: "Golos Text", sans-serif;
   font-weight: 400;
   color: var(--mainColor);
+  overflow-x: hidden;
 }
 .container {
   --width: 1222px;

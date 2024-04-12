@@ -16,7 +16,6 @@
   }
 }
 .stages__header > h2 {
-  color: var(--mainColor);
   font-family: "Merriweather", sans-serif;
   font-size: 54px;
   line-height: 64.8px;
@@ -63,11 +62,12 @@
   .stages__content {
     min-width: auto;
     margin-top: 148px;
+    gap: 0;
+    margin-bottom: 28px;
   }
 }
 .stages__content .block {
   background-image: url("../images/stages_background.png");
-  color: var(--mainColor);
   line-height: 24px;
   font-size: 20px;
   max-width: 394px;
@@ -103,6 +103,9 @@
   gap: 20px;
 }
 @media (max-width: 1200px) {
+  .stages__content .first-container {
+    width: 100%;
+  }
   .stages__content .first-container > div > div:last-child {
     padding-top: 0;
   }
@@ -167,7 +170,7 @@
 }
 @media (max-width: 376px) {
   .stages__content__image {
-    top: -120px;
+    top: -130px;
     left: 12px;
     max-width: 335px;
     width: 100%;
@@ -205,7 +208,7 @@
 
 @media (max-width: 1200px) {
   .stages__item {
-    animation: fadeInOut 1s;
+    animation: animation 1s;
     display: none;
   }
 }
@@ -222,6 +225,7 @@
 }
 @media (max-width: 1200px) {
   .stages__controls {
+    max-width: 178px;
     display: flex;
     gap: 16px;
     flex-wrap: nowrap;
@@ -236,7 +240,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 .stages__controls button:hover svg circle {
-  fill: #fbce51;
+  fill: var(--orange);
   transition: 0.5s;
 }
 .stages__controls button:disabled {
@@ -262,7 +266,7 @@
   transition: 0.5s;
 }
 
-@keyframes fadeInOut {
+@keyframes animation {
   0% {
     opacity: 0;
   }

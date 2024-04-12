@@ -184,6 +184,7 @@
   --darkButton: #1f1f1f;
   --red: #F54932;
   --blue: #3057A2;
+  --orange: #FBCE51;
   --marquee-elements-displayed: 4;
   --marquee-elements-width: calc(100vw / var(--marquee-elements-displayed)) ;
 }
@@ -197,6 +198,7 @@ body {
   font-family: "Golos Text", sans-serif;
   font-weight: 400;
   color: var(--mainColor);
+  overflow-x: hidden;
 }
 
 .container {
@@ -351,7 +353,6 @@ main {
   text-transform: uppercase;
   font-weight: 400;
   line-height: 48.6px;
-  color: var(--mainColor);
 }
 @media (max-width: 1200px) {
   .info__main-content div p, .info__header p {
@@ -378,7 +379,6 @@ main {
 .info table {
   margin-top: 60px;
   border-collapse: collapse;
-  color: var(--mainColor);
   font-size: 20px;
   font-weight: 400;
   line-height: 1.13;
@@ -386,7 +386,6 @@ main {
 .info table tr td {
   border: 2px solid #d0d0d0;
   font-size: 20px;
-  color: var(--mainColor);
   opacity: 0.7;
   padding: 16px;
 }
@@ -482,7 +481,6 @@ main {
   }
 }
 .stages__header > h2 {
-  color: var(--mainColor);
   font-family: "Merriweather", sans-serif;
   font-size: 54px;
   line-height: 64.8px;
@@ -529,11 +527,12 @@ main {
   .stages__content {
     min-width: auto;
     margin-top: 148px;
+    gap: 0;
+    margin-bottom: 28px;
   }
 }
 .stages__content .block {
   background-image: url("../images/stages_background.png");
-  color: var(--mainColor);
   line-height: 24px;
   font-size: 20px;
   max-width: 394px;
@@ -569,6 +568,9 @@ main {
   gap: 20px;
 }
 @media (max-width: 1200px) {
+  .stages__content .first-container {
+    width: 100%;
+  }
   .stages__content .first-container > div > div:last-child {
     padding-top: 0;
   }
@@ -633,7 +635,7 @@ main {
 }
 @media (max-width: 376px) {
   .stages__content__image {
-    top: -120px;
+    top: -130px;
     left: 12px;
     max-width: 335px;
     width: 100%;
@@ -671,7 +673,7 @@ main {
 
 @media (max-width: 1200px) {
   .stages__item {
-    animation: fadeInOut 1s;
+    animation: animation 1s;
     display: none;
   }
 }
@@ -688,6 +690,7 @@ main {
 }
 @media (max-width: 1200px) {
   .stages__controls {
+    max-width: 178px;
     display: flex;
     gap: 16px;
     flex-wrap: nowrap;
@@ -702,7 +705,7 @@ main {
   -webkit-tap-highlight-color: transparent;
 }
 .stages__controls button:hover svg circle {
-  fill: #fbce51;
+  fill: var(--orange);
   transition: 0.5s;
 }
 .stages__controls button:disabled {
@@ -728,13 +731,138 @@ main {
   transition: 0.5s;
 }
 
-@keyframes fadeInOut {
+@keyframes animation {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
+}
+.users {
+  padding: 100px 0 140px;
+}
+.users > div {
+  position: relative;
+}
+.users__header > h2 {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 64.8px;
+  text-transform: uppercase;
+}
+.users__content {
+  padding-top: 60px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .users__content {
+    justify-content: center;
+  }
+}
+.users__content .card {
+  animation: animation 1s;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 394px;
+}
+.users__content .card > h3 {
+  padding-top: 28px;
+  font-weight: 600;
+  line-height: 28.8px;
+  font-size: 24px;
+}
+.users__content .card > p {
+  padding-top: 6px;
+  font-size: 20px;
+  line-height: 24px;
+  opacity: 0.6;
+}
+.users__content .card > button {
+  margin-top: 35px;
+  width: 113px;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 62px;
+  font-size: 16px;
+  padding: 12px;
+}
+.users__controls {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 150px;
+}
+@media (max-width: 1200px) {
+  .users__controls {
+    position: relative;
+    max-width: 129px;
+    top: unset;
+    right: unset;
+    margin: 40px auto 0 auto;
+    gap: 14px;
+  }
+}
+.users__controls button {
+  width: 44px;
+  height: 44px;
+}
+@media (max-width: 1200px) {
+  .users__controls button {
+    width: 36px;
+    height: 36px;
+  }
+}
+.users__controls button:hover svg circle {
+  fill: var(--orange);
+  transition: 0.5s;
+}
+.users__controls div {
+  display: flex;
+  gap: 3px;
+  color: var(--mainColor);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+.users__controls div :nth-child(2) {
+  opacity: 0.6;
+}
+.users__controls div :nth-child(3) {
+  opacity: 0.6;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.footer {
+  padding: 40px 0 72px 0;
+  background-color: var(--headerColor);
+}
+@media (max-width: 375px) {
+  .footer {
+    padding: 40px 0 60px 0;
+  }
+}
+.footer p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=styles.css.map */

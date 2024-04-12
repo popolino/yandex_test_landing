@@ -69,7 +69,6 @@
   text-transform: uppercase;
   font-weight: 400;
   line-height: 48.6px;
-  color: var(--mainColor);
 }
 @media (max-width: 1200px) {
   .info__main-content div p, .info__header p {
@@ -96,7 +95,6 @@
 .info table {
   margin-top: 60px;
   border-collapse: collapse;
-  color: var(--mainColor);
   font-size: 20px;
   font-weight: 400;
   line-height: 1.13;
@@ -104,7 +102,6 @@
 .info table tr td {
   border: 2px solid #d0d0d0;
   font-size: 20px;
-  color: var(--mainColor);
   opacity: 0.7;
   padding: 16px;
 }
