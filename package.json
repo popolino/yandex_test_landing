@@ -1,5 +1,6 @@
 {
   "name": "test_landing",
+  "homepage": "https://popolino.github.io/yandex_test_landing/",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
@@ -7,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass scss:css"
+    "sass": "sass scss/styles.scss:css/styles.css"
   },
   "keywords": [],
   "author": "",

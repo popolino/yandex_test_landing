@@ -28,7 +28,9 @@ img {
     height: auto;
     display: block;
 }
-
+button{
+    cursor: pointer;
+}
 
 html {
     box-sizing: border-box;

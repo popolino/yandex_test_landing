@@ -1,6 +1,6 @@
 .users {
   padding: 100px 0 140px;
-  & > div{
+  & > div {
     position: relative;
   }
   &__header {
@@ -17,7 +17,7 @@
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    @media (max-width: 1200px){
+    @media (max-width: 1200px) {
       justify-content: center;
     }
     .card {
@@ -27,19 +27,22 @@
       flex-direction: column;
       align-items: center;
       min-width: 394px;
+      @media (max-width: 1340px) {
+        min-width: 320px;
+      }
       & > h3 {
         padding-top: 28px;
         font-weight: 600;
         line-height: 28.8px;
         font-size: 24px;
       }
-      & > p{
+      & > p {
         padding-top: 6px;
         font-size: 20px;
         line-height: 24px;
         opacity: 0.6;
       }
-      & > button{
+      & > button {
         margin-top: 35px;
         width: 113px;
         color: var(--blue);
@@ -47,6 +50,10 @@
         border-radius: 62px;
         font-size: 16px;
         padding: 12px;
+      }
+      & > button:hover {
+        color: white;
+        background-color: var(--blue);
       }
     }
   }
@@ -58,7 +65,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-  width: 150px;
+    min-width: 150px;
     @media (max-width: 1200px) {
       position: relative;
 
@@ -69,13 +76,14 @@
       gap: 14px;
     }
     button {
-      width: 44px;
-      height: 44px;
-      @media (max-width: 1200px) {
-        width: 36px;
-        height: 36px;
+      & > svg {
+        width: 44px;
+        height: 44px;
+        @media (max-width: 1200px) {
+          width: 36px;
+          height: 36px;
+        }
       }
-
       &:hover {
         svg {
           circle {
@@ -85,7 +93,6 @@
         }
       }
     }
-
     div {
       display: flex;
       gap: 3px;
@@ -93,25 +100,13 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 19.2px;
-
+      width: 35px;
       :nth-child(2) {
         opacity: 0.6;
       }
-
       :nth-child(3) {
         opacity: 0.6;
       }
-
     }
-  }
-}
-
-@keyframes animation {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }

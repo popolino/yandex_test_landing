@@ -48,7 +48,6 @@ const rightButtonUsers = document.querySelector("#users__rightButton");
 let usersCurrentSlideElement = document.querySelector("#users__currentSlide");
 let cards = document.querySelectorAll(".card");
 document.addEventListener("DOMContentLoaded", function () {
-  // Определение начального количества карточек для показа
   let cardsToShow = window.innerWidth < 1200 ? 1 : 3;
   let visibleIndex = 0;
   let slideNumber = 0;
@@ -78,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
     usersCurrentSlideElement.innerHTML = slideNumber.toString();
   }
 
-  // Слушатели событий для кнопок
   leftButtonUsers.addEventListener("click", function () {
     toggleCards(false);
   });
@@ -87,21 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleCards(true);
   });
 
-  // Слушатель для изменения размера окна
   window.addEventListener("resize", function () {
-    // Проверяем, не изменилось ли количество карточек для показа
     let newCardsToShow = window.innerWidth < 1200 ? 1 : 3;
     if (newCardsToShow !== cardsToShow) {
       cardsToShow = newCardsToShow;
-      toggleCards(true); // Переключаем карточки для правильного отображения
+      toggleCards(true);
     }
   });
 
-  // Инициализация начального состояния
   toggleCards(true);
   setInterval(function () {
     toggleCards(true);
   }, 4000);
 });
-
-//клонирование бегущей строки

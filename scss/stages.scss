@@ -3,7 +3,6 @@
   @media (max-width: 1200px) {
     padding: 20px 0 60px 0;
   }
-
   &__header {
     max-width: 806px;
     position: relative;
@@ -21,7 +20,6 @@
         line-height: 39.6px;
       }
     }
-
     & > p {
       position: absolute;
       top: 72px;
@@ -49,14 +47,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    @media (max-width: 1340px) {
+      max-width: 1000px;
+      justify-content: start;
+      min-width: auto;
+    }
     @media (max-width: 1200px) {
       min-width: auto;
       margin-top: 148px;
       gap: 0;
       margin-bottom: 28px;
     }
-
     .block {
       background-image: url("../images/stages_background.png");
       line-height: 24px;
@@ -66,6 +67,9 @@
       display: flex;
       gap: 16px;
       min-height: 112px;
+      @media (max-width: 1340px) {
+        max-width: 320px;
+      }
       @media (max-width: 1200px) {
         font-size: 18px;
         line-height: 21.6px;
@@ -117,6 +121,9 @@
       .stages__item {
         min-height: 136px;
         min-width: 394px;
+        @media (max-width: 1340px) {
+          min-width: 320px;
+        }
       }
       .stages__item:last-child {
         width: 100%;
@@ -125,6 +132,9 @@
           & > p {
             max-width: 446px;
             padding-right: 30px;
+            @media (max-width: 1340px) {
+              max-width: 320px;
+            }
           }
         }
       }
@@ -142,13 +152,14 @@
       bottom: -2px;
       right: -64px;
       user-select: none;
-
+      @media (max-width: 1340px) {
+        bottom: 50px;
+      }
       @media (max-width: 1200px) {
         top: -160px;
         left: 12px;
         bottom: unset;
         right: unset;
-        width: unset;
         transform: rotate(-4deg);
       }
       @media (max-width: 376px) {
@@ -160,7 +171,6 @@
     }
   }
 }
-
 .stages__item {
   display: flex;
   gap: 20px;
@@ -181,7 +191,6 @@
     flex-direction: column;
     gap: 0;
     min-height: 300px;
-
     & > div:first-child {
       padding: 62px 20px 33px 20px;
     }
@@ -193,17 +202,14 @@
     display: none;
   }
 }
-
 .stages__item-active {
   @media (max-width: 1200px) {
     display: grid;
   }
 }
-
 .stages__controls {
   display: none;
   margin: 8px auto 0 auto;
-
   @media (max-width: 1200px) {
     max-width: 178px;
     display: flex;
@@ -212,13 +218,10 @@
     justify-content: space-between;
     align-items: center;
   }
-
   button {
     width: 36px;
     height: 36px;
     background-color: transparent;
-    -webkit-tap-highlight-color: transparent;
-
     &:hover {
       svg {
         circle {
@@ -227,7 +230,6 @@
         }
       }
     }
-
     &:disabled {
       opacity: 0.2;
       &:hover {
@@ -240,36 +242,21 @@
     }
   }
 }
-
 .stages__dots {
   display: flex;
   gap: 6px;
-
-  -webkit-tap-highlight-color: transparent;
-
   &-active {
     circle {
-      fill: #313131;
+      fill: var(--mainColor);
     }
   }
-
   svg {
     cursor: pointer;
-
     &:hover {
       circle {
-        fill: #fbce51;
+        fill: var(--orange);
         transition: 0.5s;
       }
     }
-  }
-}
-
-@keyframes animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
